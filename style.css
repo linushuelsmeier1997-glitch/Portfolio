@@ -1,0 +1,673 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: #fff;
+  color: #0D0D0D;
+}
+
+.pf {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ── TOP BAR ── */
+.topbar {
+  border-bottom: 1.5px solid #7B6CF5;
+  padding: 12px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar-name {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.topbar-pill {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: #7B6CF5;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* ── INTRO ── */
+.intro {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 340px;
+  border-bottom: 1px solid #EDEAFF;
+}
+
+.intro-img {
+  overflow: hidden;
+  background: #f0effe;
+}
+
+.intro-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.intro-text {
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.intro-name {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+
+.intro-name span {
+  color: #7B6CF5;
+}
+
+.intro-bio {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.7;
+  margin-top: 20px;
+  flex: 1;
+  padding-top: 16px;
+  border-top: 1px solid #EDEAFF;
+}
+
+.intro-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+.tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid #ddd;
+  color: #999;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.tag.on {
+  border-color: #7B6CF5;
+  color: #7B6CF5;
+  background: #F4F2FF;
+}
+
+/* ── SECTION DIVIDER ── */
+.sec {
+  padding: 18px 32px 8px;
+  border-top: 1px solid #EDEAFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sec-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.sec-title .n {
+  color: #7B6CF5;
+}
+
+.sec-right {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: #bbb;
+  letter-spacing: 0.06em;
+}
+
+.sec-right.active {
+  color: #7B6CF5;
+}
+
+/* ── G.PUNKT ── */
+.gpunk {
+  padding: 0 32px 32px;
+}
+
+.gpunk-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.gc {
+  overflow: hidden;
+  background: #f0effe;
+}
+
+.gc img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.1);
+  display: block;
+  transition: filter 0.4s ease;
+}
+
+.gc:hover img {
+  filter: grayscale(0%) contrast(1);
+}
+
+.gc.p {
+  aspect-ratio: 3/4;
+}
+
+.gc.l {
+  grid-column: span 2;
+  aspect-ratio: 16/9;
+}
+
+.gpunk-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.gpunk-headline {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+.gpunk-headline span {
+  color: #7B6CF5;
+}
+
+.gpunk-body {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.7;
+}
+
+.ig-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7B6CF5;
+  border: 1px solid #7B6CF5;
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 20px;
+  display: inline-flex;
+}
+
+.ig-link:hover {
+  background: #7B6CF5;
+  color: #fff;
+}
+
+.ig-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+/* ── MATCHASOME ── */
+.matcha {
+  padding: 0 32px 32px;
+}
+
+.matcha-card {
+  border: 1px solid #EDEAFF;
+  background: #FAFAFF;
+  padding: 22px;
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 20px;
+  align-items: start;
+}
+
+.matcha-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7B6CF5;
+  margin-bottom: 8px;
+}
+
+.matcha-title {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.matcha-body {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.65;
+}
+
+.matcha-badge {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: #7B6CF5;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-top: 12px;
+}
+
+.matcha-img {
+  overflow: hidden;
+  background: #EDEAFF;
+  aspect-ratio: 9/14;
+}
+
+.matcha-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── OTTO ── */
+.otto {
+  padding: 0 32px 32px;
+}
+
+.otto-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+  align-items: start;
+}
+
+.otto-quote {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.otto-quote span {
+  color: #7B6CF5;
+}
+
+.otto-intro {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.7;
+}
+
+.otto-emails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.otto-email {
+  border: 1px solid #EDEAFF;
+  overflow: hidden;
+}
+
+.otto-email-bar {
+  background: #F4F2FF;
+  border-bottom: 1px solid #EDEAFF;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.oe-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #C5BFFF;
+}
+
+.otto-email-bar span {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: #7B6CF5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-left: auto;
+}
+
+.otto-email-img {
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  background: #f4f2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.otto-email-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.otto-email:hover .otto-email-img img {
+  transform: scale(1.03);
+}
+
+.otto-email-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #C5BFFF;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px;
+}
+
+.otto-email-placeholder .icon {
+  font-size: 24px;
+}
+
+.otto-email-caption {
+  padding: 12px 14px;
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
+  border-top: 1px solid #EDEAFF;
+}
+
+.otto-email-caption strong {
+  color: #0D0D0D;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 3px;
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: #7B6CF5;
+  color: #fff;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .ml {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.1em;
+}
+
+.footer .cta {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: #fff;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ── TIKTOK EMBEDS ── */
+.tiktok-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.tiktok-row .tiktok-embed {
+  margin: 0 !important;
+  min-width: unset !important;
+}
+
+/* ── G.PUNKT LOGO ── */
+.gpunk-logo {
+  margin-bottom: 20px;
+  max-width: 160px;
+}
+
+.gpunk-logo img {
+  width: 100%;
+  display: block;
+}
+
+/* ── G.PUNKT SUB-LABELS ── */
+.gpunk-sub-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #7B6CF5;
+  margin: 24px 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #EDEAFF;
+}
+
+/* ── BÜHNENBILD VIDEOS ── */
+.gpunk-videos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.gpunk-videos video {
+  width: 100%;
+  display: block;
+  background: #0D0D0D;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+/* ── INSTAGRAM POSTS ── */
+.gpunk-insta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.gi {
+  overflow: hidden;
+  background: #f0effe;
+  aspect-ratio: 1/1;
+}
+
+.gi img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gi:hover img {
+  transform: scale(1.03);
+}
+
+/* ── PARTYNACHT GRID ── */
+.gpunk-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.gc {
+  overflow: hidden;
+  background: #f0effe;
+}
+
+.gc img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.1);
+  display: block;
+  transition: filter 0.4s ease;
+}
+
+.gc:hover img {
+  filter: grayscale(0%) contrast(1);
+}
+
+.gc.p {
+  aspect-ratio: 3/4;
+}
+
+.gc.l {
+  grid-column: span 2;
+  aspect-ratio: 16/9;
+}
+
+/* ── OTTO EMAIL IFRAME ── */
+.otto-email-img iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* ── TIKTOK ROW ── */
+.tiktok-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.tiktok-row .tiktok-embed {
+  margin: 0 !important;
+  min-width: unset !important;
+}
+
+/* ── DIE NACHT GRID ── */
+.gpunk-nacht {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gpunk-nacht-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+/* Volle Breite — Guests */
+.gc.fw {
+  width: 100%;
+  aspect-ratio: 2/1;
+  overflow: hidden;
+  background: #f0effe;
+}
+
+.gc.fw img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.1);
+  display: block;
+  transition: filter 0.4s ease;
+}
+
+.gc.fw:hover img {
+  filter: grayscale(0%) contrast(1);
+}
+
+/* ── MATCHASOME HERO ── */
+.matcha-hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.matcha-hero-img {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  max-height: none;
+  background: #f4f2ff;
+}
+
+.matcha-hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  padding: 22px 24px;
+  border-top: 1.5px solid #EDEAFF;
+}
+
+.matcha-hero-overlay .matcha-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7B6CF5;
+  margin-bottom: 6px;
+}
+
+.matcha-hero-overlay .matcha-title {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #0D0D0D;
+}
+
+.matcha-hero-overlay .matcha-body {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.65;
+}
